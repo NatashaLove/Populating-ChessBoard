@@ -1,5 +1,6 @@
 
 // !! Modify - from Piece- constructors - заменяя названия переменн и классов итп
+// Constructor. Defines piece color, type and position. - lines - 50 in Pieces.
 
 package ChessPiece;
 
