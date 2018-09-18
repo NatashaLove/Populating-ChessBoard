@@ -1,7 +1,16 @@
+
+// !! Modify - from Piece- constructors - заменяя названия переменн и классов итп
+
 package ChessPiece;
 
 public class ChessPiece {
 	
+	/*global variables
+	private int color; //white 0, black 1
+	private int type;
+	private int row, col; //position on the board
+	-заменить эти авторские переменн. на мои ниже, а так же назв класса итп !!!
+	*/ 
 	
 	String c;
 	String n;
