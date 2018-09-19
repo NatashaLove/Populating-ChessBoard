@@ -33,6 +33,8 @@ public class ChessPiece {
 		
 	}
 
+	// Switching row digits onto acronyms
+	
 	public String getRowAcronym() {
 		String acro = "";
 		
@@ -76,6 +78,8 @@ public class ChessPiece {
 		this.column = column;
 	}
 	
+	//Switching from array enumeration from 0 to chess board enumeration from 1:
+	
 	public int getColumn() {
 		int c = 0;
 		
@@ -110,27 +114,7 @@ public class ChessPiece {
 		return c;
 	}
 	
-	//in order to return multiple values - use array:
-    public String[] getPosition(){
 		
-		//locating memory for 2 new vars - position 2D
-		String position[] = new String [2];
-		
-		//convert int to string
-		String columnAsString = Integer.toString(column);
-		String rowAsString = Integer.toString(row);
-		position[0]=columnAsString;
-		position[1]=rowAsString;
-	
-	// returns MEMORY LOCATIONS of array elements! ([Ljava.lang.String;@15db9742)
-		return position;
-	}
-	
-    public void setPosition(int column, int row){	
-		this.column=column;
-		this.row=row;
-	}
-	
 	public String getColor(){
 	   return color;
     }
@@ -161,5 +145,30 @@ public class ChessPiece {
 		//!!! GETPOSITION(); !!!
 
 	}
+	
+	
+	
+	//in order to return multiple values - use array:
+   
+	public String[] getPosition(){
+		
+		//locating memory for 2 new vars - position 2D
+		String position[] = new String [2];
+		
+		//convert int to string
+		String columnAsString = Integer.toString(column);
+		String rowAsString = Integer.toString(row);
+		position[0]=columnAsString;
+		position[1]=rowAsString;
+	
+	// returns MEMORY LOCATIONS of array elements! ([Ljava.lang.String;@15db9742)
+		return position;
+	}
+	
+    public void setPosition(int column, int row){	
+		this.column=column;
+		this.row=row;
+	}
+	
 
 }
