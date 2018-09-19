@@ -13,10 +13,78 @@ public class ChessPiece {
 	-заменить эти авторские переменн. на мои ниже, а так же назв класса итп !!!
 	*/ 
 	
-	String c;
-	String n;
+	// color - white 0, black 1
+	String color;
+	// type of chess piece
+	String name; 
+	// row and column for position on the board
 	private int column; 
 	private int row;
+	
+	// Default constructor.
+	public ChessPiece() {
+	}
+	
+	//Constructor. Defines piece color, type and position.
+	
+	public ChessPiece(String color, String name, int row, int column) {
+		this.color = color;
+		this.name = name;
+		this.row = row;
+		this.column = column;
+	}
+	
+	public int getRow() {
+		return row;
+	}
+
+	public void setRow(int row) {
+		this.row = row;
+		
+	}
+
+	public String getRowAcronym() {
+		String acro = "";
+		
+		switch (getRow()) {
+		case 0:
+			acro = "a";
+			break;
+		case 1:
+			acro = "b";
+			break;
+		case 2:
+			acro = "c";
+			break;
+		case 3:
+			acro = "d";
+			break;
+		case 4:
+			acro = "e";
+			break;
+		case 5:
+			acro = "f";
+			break;	
+		case 6:
+			acro = "g";
+			break;
+		case 7:	
+			acro = "h";
+			break;			
+		default:
+			break;	
+		}
+		return acro;
+	}
+	
+	
+	public int getCol() {
+		return column;
+	}
+
+	public void setCol(int column) {
+		this.column = column;
+	}
 	
 	//in order to return multiple values - use array:
     public String[] getPosition(){
@@ -34,26 +102,27 @@ public class ChessPiece {
 		return position;
 	}
 	
-    public void setPosition(int x, int y){	
-		column=x;
-		row=y;
+    public void setPosition(int column, int row){	
+		this.column=column;
+		this.row=row;
 	}
 	
 	public String getColor(){
-	   return c;
+	   return color;
     }
 	
 	public void setColor(String color){
-		c=color;
+		this.color=color;
 	}
 	
     public String getPieceType(){
-		return n;
+		return name;
 	}
 	
     public void setPieceType(String name){
-	   n=name;
+	   this.name=name;
     }
+	
 	
 	//to print 2 returned values of array (not memory location) use additional: var []= getPosition();
 	//and type every element of array in text + position [0]+...;

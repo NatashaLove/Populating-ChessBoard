@@ -1,3 +1,4 @@
+import java.util.*;
 import ChessPiece.*;
 
 public class  populateChessBoard {
@@ -5,12 +6,16 @@ public class  populateChessBoard {
 	public static void main (String [] args) {
 	
 	// Add pieces to array list.
+	//boolean add(Object o) : This method appends the specified element to the end of the arr list. 
+	//.add - method for arrays - here creates array of objs of class ChessPiece
 	
 		public void createPieces() {
 			for (int i=0; i<8; i++) { //add eight pawns for both colors
-				pieces.add(new ChessPiece(1, ChessPiece.PAWN, 1, i)); //black pawns to 2nd highest row 
-				pieces.add(new ChessPiece(0, ChessPiece.PAWN, 6, i)); //white pawns to 2nd lowest row
+			// constructor: ChessPiece(String color, String name, int row, int column)
+				pieces.add(new ChessPiece("B", "P", 1, i)); //black pawns to 2nd highest row 
+				pieces.add(new ChessPiece("W", "P", 6, i)); //white pawns to 2nd lowest row
 			}
+			// Create new objects (chess pieces) with help of constructor
 			//populate rooks
 			pieces.add(new ChessPiece(1, ChessPiece.ROOK, 0, 0)); //black rook on upper left
 			pieces.add(new ChessPiece(1, ChessPiece.ROOK, 0, 7)); //black rook on upper right
