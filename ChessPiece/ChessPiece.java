@@ -1,17 +1,6 @@
-
-// !! Modify - from Piece- constructors - заменяя названия переменн и классов итп
-// Constructor. Defines piece color, type and position. - lines - 50 in Pieces.
-
 package ChessPiece;
 
 public class ChessPiece {
-	
-	/*global variables
-	private int color; //white 0, black 1
-	private int type;
-	private int row, col; //position on the board
-	-заменить эти авторские переменн. на мои ниже, а так же назв класса итп !!!
-	*/ 
 	
 	// color - white 0, black 1
 	String color;
@@ -20,6 +9,7 @@ public class ChessPiece {
 	// row and column for position on the board
 	private int column; 
 	private int row;
+	
 	
 	// Default constructor.
 	public ChessPiece() {
