@@ -48,16 +48,31 @@ public class  populateChessBoard {
 		
 		//System.out.println(pieces);// but this prints memory location
 		
+		// System.out.println(prnt);
 		
-	// System.out.println(prnt);
-	
-	
-	// This loop prints elements from array list (with printInfo() method from he ChessPiece class
+		
+		// This loop prints elements from array list (with printInfo() method from he ChessPiece class
+		
+		/* such FOR loop (with condition like 
+		
+        for (Integer number : arrlist) { 
+            System.out.println("Number = " + number); 
+        } 
+		// prints all the elements available in list  - BUT USED ONLY for ARRAYS!!!
+		*/
+		
         for (ChessPiece piece : pieces) { 
 		
 			String print = piece.printInfo();
             System.out.println(" " + print + " ");  
         } 
+		
+		/*
+		
+		'for (thing : listOfThigs)' - is basically shorthand for =
+		`for(int i = 0; i < listOfThings.length; i++){ thing = listOfThings[i]}`
+		-ONLY for-loop and in Java
+		*/
 	
 	}
  }

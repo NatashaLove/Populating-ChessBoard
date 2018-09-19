@@ -2,7 +2,7 @@ package ChessPiece;
 
 public class ChessPiece {
 	
-	// color - white 0, black 1
+	// color - (white 0, black 1)
 	String color;
 	// type of chess piece
 	String name; 
