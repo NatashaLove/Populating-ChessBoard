@@ -76,6 +76,40 @@ public class ChessPiece {
 		this.column = column;
 	}
 	
+	public int getColumn() {
+		int c = 0;
+		
+		switch (getCol()) {
+		case 0:
+			c = 1;
+			break;
+		case 1:
+			c = 2;
+			break;
+		case 2:
+			c = 3;
+			break;
+		case 3:
+			c = 4;
+			break;
+		case 4:
+			c = 5;
+			break;
+		case 5:
+			c = 6;
+			break;	
+		case 6:
+			c = 7;
+			break;
+		case 7:	
+			c = 8;
+			break;			
+		default:
+			break;	
+		}
+		return c;
+	}
+	
 	//in order to return multiple values - use array:
     public String[] getPosition(){
 		
@@ -118,10 +152,11 @@ public class ChessPiece {
 	//and type every element of array in text + position [0]+...;
 	
 	public String printInfo(){
-		String position[]= getPosition();
+		//String position[]= getPosition();
 
-		return "\nYour chess piece is a " + getColor() + getPieceType() + 
-		" \nChess position is x/column:" + position[0] + " and y/row: " + position[1]+ "\n"; // = getPosition() - but this returns MEMORY LOCATION!!!
+		return getColor() + getPieceType() + getRowAcronym() + getColumn()+ "\n"; 
+	
+		//" \nChess position is x/column:" + position[0] + " and y/row: " + position[1]+ "\n"; // = getPosition() - but this returns MEMORY LOCATION!!!
 		// 	INSTEAD OF:  return "Your chess piece is " + getColor() + getPieceType() + 
 		//!!! GETPOSITION(); !!!
 
